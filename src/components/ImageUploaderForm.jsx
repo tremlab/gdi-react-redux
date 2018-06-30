@@ -5,3 +5,14 @@ import React from 'react';
 // make it a form element with class name ImageUploaderForm
 // write one input element and button element inside.
 // export the component!
+
+
+const ImageUploaderForm = () => {
+  return (
+    <form className="ImageUploaderForm">
+      <button>Clicky!</button>
+    </form>
+  );
+};
+
+export default ImageUploaderForm;

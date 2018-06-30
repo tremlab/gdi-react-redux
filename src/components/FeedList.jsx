@@ -11,3 +11,12 @@ import React from 'react';
 // Destructure photos from props
 // Iterate over the data and map each photo data to a FeedItem
 
+const FeedList = () => {
+  return(
+    <div className="FeedList">
+      <p>feed me.....</p>
+    </div>
+  )
+}
+
+export default FeedList;
