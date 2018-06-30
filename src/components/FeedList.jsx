@@ -1,4 +1,5 @@
 import React from 'react';
+import FeedItem from './FeedItem.jsx';
 
 // Exercise 2: Set It Up
 // write a functional component
@@ -15,6 +16,7 @@ const FeedList = () => {
   return(
     <div className="FeedList">
       <p>feed me.....</p>
+      <FeedItem />
     </div>
   )
 }
