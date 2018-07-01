@@ -21,6 +21,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "bugsnag-js": "^4.7.2",
     "bugsnag-react": "^1.1.1",
     "react": "^16.0.0",

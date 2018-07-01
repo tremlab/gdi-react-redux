@@ -21,10 +21,7 @@ const FeedItem = (props) => {
     <div className="FeedItem">
       <h2>{title}</h2>
       <img src={url}/>
-      <Likes
-        userLiked={userLiked}
-        likes={likes}
-      />
+      <Likes userLiked={userLiked} likes={likes} />
     </div>
   );
 };

@@ -9,17 +9,38 @@ import React from 'react';
 // Exercise 3: Prop It Up
 // Likes should take in number of likes as a prop and display it.
 
-const Likes = (props) => {
+// Exercise 4: Class It Up
+// Turn Likes from a functional to a class component.
+	 // handle import/inheritance
+	 // add a render method
+	 // change props from function argument to object attribute
 
-  const {likes, userLiked } = props;
-  return (
-    <div className="Likes">
-      <span>
-        Likes: {likes}
-      </span>
-      <button name="likesButton">You like? {userLiked}</button>
-    </div>
-  )
+// Exercise 5: State It
+// Create a button that toggles between two states: "Liked" and "Not liked (yet)"
+	 // add a constructor with initial state
+	 // add a button to the rendered JSX with an onClick attribute
+	 // add a method to handle the click/ change the state
+	 // hook up the button text to the state
+// BONUS: Create a likes counter
+	 // take in a prop for the number of likes
+	 // increase or decrease the likes based on whether button click is like/ unlike
+	 // hint: take the total likes as a prop, and convert it to state
+
+class Likes extends React.Component {
+  render() {
+
+    const {likes, userLiked } = this.props;
+
+    return (
+      <div className="Likes">
+        <span>
+          Likes: {likes}
+        </span>
+        <button name="likesButton">You like? {userLiked}</button>
+      </div>
+    );
+    
+  }
 }
 
 export default Likes;

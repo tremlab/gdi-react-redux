@@ -2,22 +2,22 @@
 	"photos": [
 		{
 			"id": 1,
-			"title": "Too cool for school",
-			"url": "https://media.giphy.com/media/5gXYzsVBmjIsw/giphy.gif",
+			"title": "Too Legit",
+			"url": "https://media.giphy.com/media/3ohc1dHWofr304zNo4/giphy.gif",
 			"likes": 305,
 			"userLiked": false
 		},
 		{
 			"id": 2,
-			"title": "From under the sofa",
-			"url": "http://i.imgur.com/Bz0AsI6.gif",
+			"title": "STAY OUT OF MALIBU!",
+			"url": "https://i.imgur.com/tq2GyLy.gif",
 			"likes": 185,
 			"userLiked": false
 		},
 		{
 			"id": 3,
-			"title": "What I have to deal with on a daily basis",
-			"url": "http://i.imgur.com/MCmdIbF.gif",
+			"title": "Bebop",
+			"url": "https://media.giphy.com/media/fBNQRhWth737a/giphy.gif",
 			"likes": 65,
 			"userLiked": false
 		},
