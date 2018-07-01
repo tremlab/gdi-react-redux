@@ -17,7 +17,9 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <ImageUploaderForm />
-      <FeedList />
+      <FeedList
+        imgArray={data.photos}
+      />
     </div>
   );
 }

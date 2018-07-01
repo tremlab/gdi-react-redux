@@ -12,11 +12,16 @@ import FeedItem from './FeedItem.jsx';
 // Destructure photos from props
 // Iterate over the data and map each photo data to a FeedItem
 
-const FeedList = () => {
+const FeedList = (props) => {
+  const images = props.imgArray;
+
+  const imageComponents = images.map(imageObj =>
+    <FeedItem image={imageObj} key={imageObj.id}/>
+  )
   return(
     <div className="FeedList">
       <p>feed me.....</p>
-      <FeedItem />
+      {imageComponents}
     </div>
   )
 }

@@ -10,7 +10,8 @@ import React from 'react';
 const ImageUploaderForm = () => {
   return (
     <form className="ImageUploaderForm">
-      <button>Clicky!</button>
+      URL: <input type="text" name="imgUrl"></input>
+      <button name="imgSubmit">Clicky!</button>
     </form>
   );
 };

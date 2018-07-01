@@ -1,5 +1,5 @@
 import React from 'react';
-// import Likes from './Likes.jsx';
+import Likes from './Likes.jsx';
 
 // Exercise 2: Set It Up
 // write a functional component
@@ -15,10 +15,16 @@ import React from 'react';
 // Hint what do you need in order to get likes to display in the Likes component?
 
 
-const FeedItem = () => {
+const FeedItem = (props) => {
+  const { id, title, url, likes, userLiked } = props.image;
   return(
     <div className="FeedItem">
-      <img src="https://sliptalk.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/05/11165600/cute-baby-sloth-institute-costa-rica-sam-trull-6.jpg"/>
+      <h2>{title}</h2>
+      <img src={url}/>
+      <Likes
+        userLiked={userLiked}
+        likes={likes}
+      />
     </div>
   );
 };
