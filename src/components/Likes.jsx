@@ -59,7 +59,7 @@ class Likes extends React.Component {
           {
             !this.state.liked ?
             "Like :)" :
-            "Unlike :(s"
+            "Unlike :("
           }
         </button>
         <p>{ this.state.liked }</p>
