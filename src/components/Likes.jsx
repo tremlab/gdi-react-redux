@@ -27,19 +27,45 @@ import React from 'react';
 	 // hint: take the total likes as a prop, and convert it to state
 
 class Likes extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state ={
+      liked: this.props.userLiked,
+      numLikes: this.props.likes
+    }
+  }
+
+  handleLike = (e) => {
+    this.setState( {liked: !this.state.liked} )
+
+    let newLikesNum = this.state.numLikes
+
+    if (this.state.liked) {
+      newLikesNum += 1
+    } else {
+      newLikesNum -= 1
+    }
+
+    this.setState({numLikes: newLikesNum})
+  }
+
   render() {
-
-    const {likes, userLiked } = this.props;
-
     return (
       <div className="Likes">
         <span>
-          Likes: {likes}
+          Likes: {this.state.numLikes}
         </span>
-        <button name="likesButton">You like? {userLiked}</button>
+        <button name="likesButton" onClick={this.handleLike}>
+          {
+            !this.state.liked ?
+            "Like :)" :
+            "Unlike :(s"
+          }
+        </button>
+        <p>{ this.state.liked }</p>
       </div>
     );
-    
+
   }
 }
 
