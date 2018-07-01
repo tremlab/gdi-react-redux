@@ -1,6 +1,6 @@
 // initialize bugsnag ASAP, before other imports
 import bugsnag from 'bugsnag-js'
-const bugsnagClient = bugsnag('YOUR-API-KEY')
+const bugsnagClient = bugsnag('YOUR-API_KEY')
 
 // Exercise 1: Render It
 // import React
@@ -16,14 +16,11 @@ import './style.css';
 import App from './App.jsx';
 
 
-// wrap your entire app tree in the ErrorBoundary provided
-// const ErrorBoundary = bugsnagClient.use(createPlugin(React))
-// ReactDOM.render(
-//     <App />,
-//   document.getElementById('app-root')
-// )
+console.log(bugsnagClient);
+const ErrorBoundary = bugsnagClient.use(createPlugin(React));
+console.log(ErrorBoundary);
 
-const ErrorBoundary = bugsnagClient.use(createPlugin(React))
+// wrap your entire app tree in the ErrorBoundary provided
 ReactDOM.render(
   <ErrorBoundary>
     <App />
