@@ -62,7 +62,6 @@ class Likes extends React.Component {
             "Unlike :("
           }
         </button>
-        <p>{ this.state.liked }</p>
       </div>
     );
 
