@@ -29,7 +29,7 @@ import React from 'react';
 class Likes extends React.Component {
   constructor(props) {
     super(props)
-    this.state ={
+    this.state = {
       liked: this.props.userLiked,
       numLikes: this.props.likes
     }

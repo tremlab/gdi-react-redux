@@ -31,13 +31,32 @@ import React from 'react';
     // and when the user submits, call that function with the user submitted url.
 
 
-const ImageUploaderForm = () => {
-  return (
-    <form className="ImageUploaderForm">
-      URL: <input type="text" name="imgUrl"></input>
-      <button name="imgSubmit">Clicky!</button>
-    </form>
-  );
-};
+class ImageUploaderForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formUrl: ""
+    }
+  }
+
+  handleUrlInput = (e) => {
+    this.setState( {formUrl: e.target.value} )
+  }
+
+  handleUrlSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.formUrl)
+    this.setState( {formUrl: ""} )
+  }
+
+  render() {
+    return (
+      <form className="ImageUploaderForm">
+        URL: <input type="text" value={this.state.formUrl} name="imgUrl" onChange={this.handleUrlInput}></input>
+        <button type="submit" name="imgSubmit" onClick={this.handleUrlSubmit}>Clicky!</button>
+      </form>
+    );
+  }
+}
 
 export default ImageUploaderForm;
